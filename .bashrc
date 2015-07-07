@@ -43,9 +43,17 @@ alias athena.remote='ssh athena@24.229.66.26 -p 6996'
 alias open='xdg-open'
 alias gopkg='chromium-browser golang.org/pkg/'
 
-# pebble
-export PATH=~/code/pebble-dev/arm-cs-tools/bin:$PATH
-alias pebble_app='~/code/pebble-dev/PebbleSDK-1.12/Pebble/tools/create_pebble_project.py ~/code/pebble-dev/PebbleSDK-1.12/Pebble/sdk'
+#java home
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export JAVA_HOME
+PATH=$PATH:$JAVA_HOME
+export PATH
+
+#andriod home
+export ANDROID_HOME=$HOME/IdeaProjects/android-sdk-linux
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/home/greg/.gvm/bin/gvm-init.sh" ]] && source "/home/greg/.gvm/bin/gvm-init.sh"
+[[ -s "/home/gabe/.gvm/bin/gvm-init.sh" ]] && source "/home/gabe/.gvm/bin/gvm-init.sh"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
